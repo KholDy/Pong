@@ -20,8 +20,8 @@ public class PongPanel extends JPanel implements KeyListener, MouseMotionListene
     int delay = 33;
 
     public PongPanel() {
-        player = new Player(50, 240, 6, 60);
-        player2 = new Player(750, 240, 6, 60);
+        player = new Player(0, 240, 6, 60);
+        player2 = new Player(786, 240, 6, 60);
 
         score = new Score();
         score.setBounds(367, 0, 60, 34);

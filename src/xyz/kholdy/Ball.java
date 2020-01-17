@@ -54,11 +54,11 @@ public class Ball {
         }
 
         //Столкновение рокетки и мяча player-1
-        if (x <= player_one.getX() && (y <= player_one.getY() + 60 && y >= player_one.getY())) xSpeed = -xSpeed;
+        if ((x + size < player_one.getX()) && y <= player_one.getY() && y >= player_one.getY() + 60) xSpeed = -xSpeed;
         //if(x < player.getX()) xSpeed = 0; ySpeed = 0;
 
         //Столкновение рокетки и мяча player-2
-        if (x >= player_two.getX() && (y <= player_two.getY() + 60 && y >= player_two.getY())) xSpeed = -xSpeed;
+        if ((x + size > player_two.getX()) && y >= player_two.getY() && y <= player_two.getY() + 60) xSpeed = -xSpeed;
 
         //Вброс мяча если один из игроков его пропустил
         if (x <= 5) {
